@@ -8,7 +8,7 @@ WORKDIR /build/
 ARG DOWNLOAD_FILE="imagebuilder-.*x86_64.tar.xz"
 ARG TARGET=x86/64
 ARG FILE_HOST=downloads.openwrt.org
-ARG VERSION_PATH
+ARG VERSION_PATH=22.03.5
 
 # if $VERSION is empty fallback to snapshots
 ENV VERSION_PATH=${VERSION_PATH:-snapshots}
