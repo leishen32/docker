@@ -12,7 +12,7 @@ ARG VERSION_PATH=22.03.5
 
 # if $VERSION is empty fallback to snapshots
 ENV VERSION_PATH=${VERSION_PATH:-snapshots}
-ENV DOWNLOAD_PATH=$VERSION_PATH/targets/$TARGET
+ENV DOWNLOAD_PATH=releases/$VERSION_PATH/targets/$TARGET
 
 RUN curl "https://$FILE_HOST/$DOWNLOAD_PATH/sha256sums" -fs -o sha256sums
 RUN curl "https://$FILE_HOST/$DOWNLOAD_PATH/sha256sums.asc" -fs -o sha256sums.asc || true
